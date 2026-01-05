@@ -1,89 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>قلوب المصريين</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="app">
-
-    <!-- تسجيل الدخول -->
-    <section id="login" class="screen">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>قلوب المصريين</h1>
-            <p>احجز أضحيتك وانت في بيتك</p>
-            <input placeholder="رقم الهاتف">
-            <input type="password" placeholder="كلمة المرور">
-            <button onclick="login()">دخول</button>
-            <span class="takbeer">الله أكبر • الله أكبر • الله أكبر</span>
-        </div>
-    </section>
-
-    <!-- القائمة -->
-    <section id="list" class="screen hidden">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>اختر الأضحية</h2>
-
-            <div class="card" onclick="selectUdhiyah('cow')">
-                <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783">
-                <h3>عجل بلدي</h3>
-                <p>450 كجم - 90,000 جنيه</p>
-                <button>احجز الآن</button>
-            </div>
-
-            <div class="card" onclick="selectUdhiyah('sheep')">
-                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
-                <h3>خروف بلدي</h3>
-                <p>70 كجم - 9,000 جنيه</p>
-                <button>احجز الآن</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- التفاصيل -->
-    <section id="details" class="screen hidden">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2 id="title"></h2>
-            <img id="image">
-            <p id="weight"></p>
-            <p id="price"></p>
-            <p>📅 الذبح: أول أيام العيد</p>
-            <button onclick="goPayment()">متابعة الدفع</button>
-        </div>
-    </section>
-
-    <!-- الدفع -->
-    <section id="payment" class="screen hidden">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>الدفع الإلكتروني</h2>
-            <button>فوري</button>
-            <button>فودافون كاش</button>
-            <button>إنستا باي</button>
-            <button onclick="goCamera()">بطاقة بنكية</button>
-        </div>
-    </section>
-
-    <!-- الكاميرا -->
-    <section id="camera" class="screen hidden">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>بث مباشر للأضحية</h2>
-            <video controls autoplay muted>
-                <source src="sample.mp4" type="video/mp4">
-            </video>
-            <p class="blessing">تقبل الله منا ومنكم</p>
-        </div>
-    </section>
-
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
